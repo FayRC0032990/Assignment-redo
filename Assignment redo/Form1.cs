@@ -86,8 +86,8 @@ namespace Assignment_redo
             }
             RP = 1 / (1 / R1 + 1 / R2 + 1 / R3 + 1 / R4 + 1 / R5);
 
-            label6.Text = " Answer Series" + RS.ToString("0.00");
-            label7.Text = " Answer Parallel" + RP.ToString("0.00");
+            label6.Text = " Answer Series " + RS.ToString("0.00");
+            label7.Text = " Answer Parallel " + RP.ToString("0.00");
 
         }
     }
