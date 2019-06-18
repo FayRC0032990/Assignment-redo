@@ -19,25 +19,76 @@ namespace Assignment_redo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            double R1, R2, R3, R4, R5, RS, RP;
+
             try
             {
-                Double R1 = Convert.ToDouble(textBox1.Text);
-                Double R2 = Convert.ToDouble(textBox2.Text);
-                Double R3 = Convert.ToDouble(textBox3.Text);
-                Double R4 = Convert.ToDouble(textBox4.Text);
-                Double R5 = Convert.ToDouble(textBox5.Text);
-
-                Double RS = R1 + R2 + R3 + R4 + R5;
-                Double RP = 1 / (R1 + 1 / R2 + 1 / R3 + 1 / R4 + 1 / R5);
-                label6.Text = " Answer Series" + RS.ToString("0.00");
-                label7.Text = " Answer Parallel" + RP.ToString("0.00");
+                R1 = Convert.ToDouble(textBox1.Text);                
             }
             catch
             {
-                label6.Text = "Answer Series";
-                label7.Text = "Answer Parallel";
-            }     
-           
+                R1 = 0;
+            }
+            try
+            {
+                R2 = Convert.ToDouble(textBox2.Text);
+            }
+            catch
+            {
+                R2 = 0;
+            }
+            try
+            {
+                R3 = Convert.ToDouble(textBox3.Text);
+            }
+            catch
+            {
+                R3 = 0;
+            }
+            try
+            {
+                R4 = Convert.ToDouble(textBox4.Text);
+            }
+            catch
+            {
+                R4 = 0;
+            }
+            try
+            {
+                R5 = Convert.ToDouble(textBox5.Text);
+            }
+            catch
+            {
+                R5 = 0;
+            }
+            
+            RS = R1 + R2 + R3 + R4 + R5;
+
+            if (R1 == 0)
+            {
+                R1 = double.PositiveInfinity;
+            }
+            if (R2 == 0)
+            {
+                R2 = double.PositiveInfinity;
+            }
+            if (R3 == 0)
+            {
+                R3 = double.PositiveInfinity;
+            }
+            if (R4 == 0)
+            {
+                R4 = double.PositiveInfinity;
+            }
+            if (R5 == 0)
+            {
+                R5 = double.PositiveInfinity;
+            }
+            RP = 1 / (1 / R1 + 1 / R2 + 1 / R3 + 1 / R4 + 1 / R5);
+
+            label6.Text = " Answer Series" + RS.ToString("0.00");
+            label7.Text = " Answer Parallel" + RP.ToString("0.00");
+
         }
     }
 }
