@@ -16,5 +16,16 @@ namespace Assignment_redo
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Double R1 = Convert.ToDouble(textBox1.Text);
+            Double R2 = Convert.ToDouble(textBox2.Text);
+            Double R3 = Convert.ToDouble(textBox3.Text);
+            Double R4 = Convert.ToDouble(textBox4.Text);
+            Double R5 = Convert.ToDouble(textBox5.Text);
+
+            
+        }
     }
 }
